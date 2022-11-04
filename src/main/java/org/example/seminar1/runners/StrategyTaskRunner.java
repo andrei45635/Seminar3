@@ -10,7 +10,7 @@ public class StrategyTaskRunner implements TaskRunner {
     private final Container container;
 
     public StrategyTaskRunner(Strategy strategy) {
-        this.container = TaskContainerFactory.getInstance().createContainer(strategy);
+        this.container = (Container) TaskContainerFactory.getInstance().createContainer(strategy);
     }
 
     @Override
